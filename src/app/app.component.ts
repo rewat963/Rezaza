@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage, icon:'home' },
       { title: 'List', component: ListPage, icon:'list'},
-      { title: 'Login', component: LoginPage, icon:'basketball' }
+      { title: 'Login', component: LoginPage, icon:'basketball' },
+      { title: 'BarcodeScanner', component:BarcodeScannerPage, icon:'basketball' }
     ];
 
   }

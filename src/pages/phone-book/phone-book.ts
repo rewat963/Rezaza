@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController} from 'ionic-angular';
 
 
 @IonicPage()
@@ -9,16 +9,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PhoneBookPage {
 
-  contactArray = [{ name: 'Prayuth1', teephone: '090060', imageUrl: 'assets/imgs/yut1.jpg' },
-                  { name: 'Prayuth2', teephone: '090060', imageUrl: 'assets/imgs/yut2.jpg' },
-                  { name: 'Prayuth3', teephone: '090060', imageUrl: 'assets/imgs/yut3.jpg' },
-                  { name: 'Prayuth4', teephone: '090060', imageUrl: 'assets/imgs/yut4.jpg' }
+  contactArray = [{ name: 'Prayuth1', telephone: '090060', imageUrl: 'assets/imgs/yut1.jpg' },
+                  { name: 'Prayuth2', telephone: '090060', imageUrl: 'assets/imgs/yut2.jpg' },
+                  { name: 'Prayuth3', telephone: '090060', imageUrl: 'assets/imgs/yut3.jpg' },
+                  { name: 'Prayuth4', telephone: '090060', imageUrl: 'assets/imgs/yut4.jpg' }
                 ];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PhoneBookPage');
+  }
+
+  viewDetail(item){
+    this.navCtrl.push("PhoneBookDetailPage", item);
+
   }
 
 }//end class

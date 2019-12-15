@@ -5,14 +5,14 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list >
-    <ion-item *ngFor="let item of contactArray"  > 
-      <ion-avatar item-left>
-        <img src="{{item.imageUrl}}">
-      </ion-avatar>
-      {{item.name}}<br> 
-      {{item.teephone}}<br>
- 
-    </ion-item>
-  </ion-list>
+    <ion-list>
+      <ion-item *ngFor="let item of contactArray" (click)="viewDetail(item)">
+        <ion-avatar item-left>
+          <img src="{{item.imageUrl}}">
+        </ion-avatar>
+        {{item.name}}<br>
+        {{item.telephone}}<br>
+
+      </ion-item>
+    </ion-list>
 </ion-content>

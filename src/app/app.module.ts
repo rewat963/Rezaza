@@ -10,11 +10,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
+import { BarcodeScannerPage } from '../pages/barcode-scanner/barcode-scanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,LoginPage,
+    HomePage,LoginPage,BarcodeScannerPage,
     ListPage
   ],
   imports: [
@@ -24,11 +26,11 @@ import { LoginPage } from '../pages/login/login';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,LoginPage,
+    HomePage,LoginPage,BarcodeScannerPage,
     ListPage
   ],
   providers: [
-    StatusBar,
+    StatusBar,BarcodeScanner,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
